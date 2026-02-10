@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICT Midnight Open & 8:30 AM Open Scalping Guide | Vedic Trades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #f7f6f3;
+      --text: #37352f;
+      --text-secondary: #6b6b6b;
+      --text-muted: #9b9a97;
+      --border: #e9e9e7;
+      --highlight: #fff3a3;
+      --callout-yellow: #fef9e6;
+      --callout-blue: #e7f3ff;
+      --callout-green: #e6f6e6;
+      --callout-red: #fce8e8;
+      --callout-purple: #f3e8fd;
+      --code-bg: #f1f1ef;
+      --cover-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f0f 100%);
+    }
+    
+    [data-theme="dark"] {
+      --bg: #191919;
+      --bg-secondary: #252525;
+      --text: #e0e0e0;
+      --text-secondary: #a0a0a0;
+      --text-muted: #707070;
+      --border: #333333;
+      --highlight: #4a4520;
+      --callout-yellow: #2d2a1a;
+      --callout-blue: #1a2433;
+      --callout-green: #1a2a1a;
+      --callout-red: #2a1a1a;
+      --callout-purple: #251a33;
+      --code-bg: #2a2a2a;
+      --cover-bg: linear-gradient(135deg, #050505 0%, #0d0d1a 50%, #080808 100%);
+    }
+    
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; transition: background 0.3s, color 0.3s; }
+    .page { max-width: 720px; margin: 0 auto; padding: 80px 24px 120px; }
+    
+    .theme-toggle { position: fixed; top: 20px; right: 20px; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-secondary); border: 1px solid var(--border); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; z-index: 100; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .theme-toggle:hover { transform: scale(1.05); }
+    .theme-toggle .sun { display: none; }
+    .theme-toggle .moon { display: block; }
+    [data-theme="dark"] .theme-toggle .sun { display: block; }
+    [data-theme="dark"] .theme-toggle .moon { display: none; }
+    
+    .cover { width: 100vw; margin-left: calc(-50vw + 50%); height: 280px; background: var(--cover-bg); position: relative; overflow: hidden; }
+    .cover::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(0,220,130,0.06) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(255,255,255,0.03) 0%, transparent 50%); }
+    .cover-pattern { position: absolute; inset: 0; opacity: 0.03; background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 50px 50px; }
+    
+    .icon { font-size: 72px; margin-top: -40px; margin-bottom: 16px; }
+    h1 { font-family: 'Merriweather', Georgia, serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+    .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 8px; }
+    .blog-link { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+    .blog-link a { color: var(--text-secondary); font-weight: 500; }
+    
+    .properties { display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 40px; font-size: 14px; }
+    .property { display: flex; align-items: center; gap: 8px; }
+    .property-label { color: var(--text-muted); }
+    .tag { padding: 2px 8px; border-radius: 3px; font-size: 12px; font-weight: 500; }
+    .tag.green { background: #e8f5e9; color: #2e7d32; }
+    [data-theme="dark"] .tag.green { background: #1a2a1a; color: #6abf6a; }
+    .tag.blue { background: #e3f2fd; color: #1565c0; }
+    [data-theme="dark"] .tag.blue { background: #1a2433; color: #64b5f6; }
+    .tag.black { background: #1a1a1a; color: #ffffff; }
+    [data-theme="dark"] .tag.black { background: #ffffff; color: #1a1a1a; }
+    .tag.orange { background: #fff3e0; color: #e65100; }
+    [data-theme="dark"] .tag.orange { background: #2a1f1a; color: #ffb74d; }
+    .tag.gold { background: #fff8e1; color: #f57f17; }
+    [data-theme="dark"] .tag.gold { background: #2a2510; color: #ffd54f; }
+    .tag.red { background: #fce8e8; color: #c62828; }
+    [data-theme="dark"] .tag.red { background: #2a1a1a; color: #ef9a9a; }
+    .tag.purple { background: #f3e8fd; color: #6a1b9a; }
+    [data-theme="dark"] .tag.purple { background: #251a33; color: #ce93d8; }
+    
+    h2 { font-size: 24px; font-weight: 600; margin: 48px 0 16px; }
+    h3 { font-size: 18px; font-weight: 600; margin: 32px 0 12px; }
+    p { margin-bottom: 16px; }
+    
+    .callout { background: var(--bg-secondary); border-radius: 4px; padding: 16px 16px 16px 48px; position: relative; margin: 24px 0; }
+    .callout-icon { position: absolute; left: 16px; top: 16px; font-size: 18px; }
+    .callout.blue { background: var(--callout-blue); }
+    .callout.green { background: var(--callout-green); }
+    .callout.yellow { background: var(--callout-yellow); }
+    .callout.red { background: var(--callout-red); }
+    .callout.purple { background: var(--callout-purple); }
+    
+    .quote { border-left: 3px solid var(--text); padding-left: 16px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+    
+    .highlight-num { background: var(--code-bg); padding: 2px 6px; border-radius: 3px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 14px; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+    
+    .toggle { margin: 16px 0; }
+    .toggle-header { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 8px 0; font-weight: 500; }
+    .toggle-header::before { content: '▶'; font-size: 10px; transition: transform 0.2s; }
+    .toggle.open .toggle-header::before { transform: rotate(90deg); }
+    .toggle-content { display: none; padding-left: 24px; }
+    .toggle.open .toggle-content { display: block; }
+    
+    ul, ol { margin: 16px 0; padding-left: 24px; }
+    li { margin: 8px 0; }
+    a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
+    a:hover { text-decoration-color: var(--text); }
+    .inline-highlight { background: var(--highlight); padding: 0 2px; }
+
+    .step-block { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 20px 20px 20px 24px; margin: 20px 0; position: relative; }
+    .step-block::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #1a1a1a; border-radius: 6px 0 0 6px; }
+    [data-theme="dark"] .step-block::before { background: #e0e0e0; }
+    .step-block.green-bar::before { background: #22c55e !important; }
+    .step-block.red-bar::before { background: #ef4444 !important; }
+    .step-block.blue-bar::before { background: #3b82f6 !important; }
+    .step-block.gold-bar::before { background: #f59e0b !important; }
+    .step-block h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .step-block p { font-size: 14px; color: var(--text-secondary); margin: 0; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #1a1a1a; color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+    [data-theme="dark"] .step-num { background: #e0e0e0; color: #1a1a1a; }
+
+    .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .vs-card { background: var(--bg-secondary); border-radius: 6px; padding: 20px; border: 1px solid var(--border); }
+    .vs-card.long { border-color: #22c55e; box-shadow: 0 0 0 1px #22c55e; }
+    .vs-card.short { border-color: #ef4444; box-shadow: 0 0 0 1px #ef4444; }
+    .vs-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .vs-card p { font-size: 14px; color: var(--text-secondary); margin: 0; line-height: 1.7; }
+
+    .feature-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+    .feature-item { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 16px 12px; text-align: center; }
+    .feature-item .feat-icon { font-size: 24px; margin-bottom: 6px; }
+    .feature-item .feat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+    .feature-item .feat-value { font-size: 16px; font-weight: 700; color: var(--text); }
+
+    .chart-img { width: 100%; border-radius: 6px; border: 1px solid var(--border); margin: 20px 0 8px; display: block; }
+    .chart-caption { font-size: 13px; color: var(--text-muted); text-align: center; margin: 0 0 24px; font-style: italic; }
+
+    .end-banner { margin: 32px 0 0; padding: 14px 20px; border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--text-muted); }
+    .end-banner strong { color: var(--text); font-weight: 600; }
+    .end-banner-link { font-size: 13px; font-weight: 600; color: var(--text); background: var(--bg-secondary); padding: 6px 14px; border-radius: 4px; border: 1px solid var(--border); text-decoration: none; white-space: nowrap; }
+    .end-banner-link:hover { border-color: var(--text); }
+
+    .subtle-cta { margin: 40px 0; padding: 20px 0; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-secondary); }
+    .subtle-cta a { color: var(--text); font-weight: 500; }
+
+    .footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-muted); text-align: center; }
+
+    @media (max-width: 600px) {
+      .vs-grid { grid-template-columns: 1fr; }
+      .feature-strip { grid-template-columns: repeat(3, 1fr); }
+      h1 { font-size: 28px; }
+      .end-banner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
+    <span class="moon">🌙</span>
+    <span class="sun">☀️</span>
+  </button>
+
+  <div class="cover">
+    <div class="cover-pattern"></div>
+  </div>
+  
+  <div class="page">
+    <div class="icon">🕛</div>
+    
+    <h1>ICT Midnight Open & 8:30 AM Open</h1>
+    <p class="subtitle">The scalper's playbook for determining short-term bias using two of ICT's most powerful session levels.</p>
+    <p class="blog-link"><a href="https://lucidtrading.com/ref/vedictrades/" target="_blank">Lucid Trading</a> · <a href="https://tradeify.co/?ref=Vedic" target="_blank">Tradeify</a> · Vedic Trades</p>
+    
+    <div class="properties">
+      <div class="property">
+        <span class="property-label">Strategy</span>
+        <span class="tag black">ICT Scalping</span>
+      </div>
+      <div class="property">
+        <span class="property-label">Instrument</span>
+        <span class="tag blue">NQ Futures</span>
+      </div>
+      <div class="property">
+        <span class="property-label">Win Rate</span>
+        <span class="tag green">~70%</span>
+      </div>
+      <div class="property">
+        <span class="property-label">TP / SL</span>
+        <span class="tag gold">20pt / 20pt</span>
+      </div>
+      <div class="property">
+        <span class="property-label">Session</span>
+        <span class="tag purple">NY Open 9:30 AM</span>
+      </div>
+    </div>
+
+    <!-- HOOK -->
+    <p>The Midnight Open (00:00 NY) and the 8:30 AM Open are two of the most powerful reference levels in ICT. At the 9:30 AM equity open, <span class="inline-highlight">price's position relative to these two levels tells you the short-term bias before anyone else has figured it out.</span></p>
+
+    <p>These aren't just one-and-done levels — they function as dynamic support and resistance throughout the entire session, giving you opportunities for the initial scalp, continuations, and even reversals.</p>
+
+    <div class="callout green">
+      <span class="callout-icon">🔥</span>
+      <strong>Need a funded account to trade this?</strong> Check out <a href="https://lucidtrading.com/ref/vedictrades/" target="_blank">Lucid Trading</a> (use code <span class="highlight-num">VEDIC</span> for up to 40% off) or <a href="https://tradeify.co/?ref=Vedic" target="_blank">Tradeify</a> — both are ideal for scalpers.
+    </div>
+
+    <!-- CORE IDEA -->
+    <h2>The Core Idea</h2>
+
+    <p>The logic is simple: at 9:30 AM, check where price is relative to the Midnight Open and 8:30 AM Open. These two levels define your bias. If the opening candle then sweeps a 15-minute liquidity level and reverses, you've got your first trade of the day.</p>
+
+    <div class="vs-grid">
+      <div class="vs-card long">
+        <h4>↑ Long Setup</h4>
+        <p>Price is <strong>below</strong> both the Midnight Open and 8:30 AM Open at 9:30. The opening candle sweeps a 15m liquidity low, reverses up, and offers an entry — IFVG, OB, or plain FVG. Scalp long for 20 points.</p>
+      </div>
+      <div class="vs-card short">
+        <h4>↓ Short Setup</h4>
+        <p>Price is <strong>above</strong> both the Midnight Open and 8:30 AM Open at 9:30. The opening candle sweeps a 15m liquidity high, reverses down, and offers an entry — IFVG, OB, or plain FVG. Scalp short for 20 points.</p>
+      </div>
+    </div>
+
+    <div class="feature-strip">
+      <div class="feature-item">
+        <div class="feat-icon">🎯</div>
+        <div class="feat-label">Take Profit</div>
+        <div class="feat-value">20 pts</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">🛑</div>
+        <div class="feat-label">Stop Loss</div>
+        <div class="feat-value">20 pts</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">📊</div>
+        <div class="feat-label">Win Rate</div>
+        <div class="feat-value">~70%</div>
+      </div>
+    </div>
+
+    <div class="callout yellow">
+      <span class="callout-icon">💡</span>
+      <strong>SL flexibility:</strong> You can use either a flat 20-point stop, or place your stop at the swing low (for longs) / swing high (for shorts). Both approaches work — use whichever suits your risk tolerance.
+    </div>
+
+    <hr>
+
+    <!-- STEP BY STEP -->
+    <h2>Step-by-Step Execution</h2>
+
+    <p>This is a precise, multi-timeframe drill-down. You start on the 15-minute, narrow into the 1-minute, then snipe your entry on the 15-second. Here's the full walkthrough with a live example from <strong>February 9, 2026 on NQ</strong>.</p>
+
+    <!-- STEP 1 -->
+    <h3>Step 1 — Mark the levels on the 15m chart</h3>
+    
+    <p>Your indicator plots the Midnight Open and 8:30 AM Open automatically. Your job is to identify and mark the <strong>15m liquidity</strong> — the intermediate-term highs (ITH) and lows (ITL) formed before 9:30 AM. In this example, we marked the 15m ITLs below the session open.</p>
+
+    <img src="NQ1__2026-02-10_09-30-03_7599d.png" alt="15m chart showing Midnight Open, 8:30 AM Open, and 15m liquidity levels" class="chart-img">
+    <p class="chart-caption">15m NQ — Midnight Open (00:00 NY) and 8:30 AM Open marked. Price is below both at 9:30 AM = long bias. 15m ITLs marked as sweep targets.</p>
+
+    <!-- STEP 2 -->
+    <h3>Step 2 — Drop to the 1m chart at 9:30 AM</h3>
+
+    <p>Watch the opening candle. You need to see it <strong>sweep</strong> the 15m liquidity you marked. This is the trap — retail gets stopped out, and smart money loads in the opposite direction. You do <em>not</em> need to wait for the 1m candle to close once the sweep happens.</p>
+
+    <img src="NQ1__2026-02-10_09-30-33_b7c91.png" alt="1m chart showing the opening candle sweeping 15m liquidity" class="chart-img">
+    <p class="chart-caption">1m NQ — The 9:30 opening candle sweeps the 15m ITL. Price is below both key levels, confirming long bias.</p>
+
+    <!-- STEP 3 -->
+    <h3>Step 3 — Drop to the 15s chart immediately</h3>
+
+    <p>As soon as the sweep happens, drop to the 15-second chart. Identify the closest <strong>bearish FVG</strong> (since we want longs). This is the gap that needs to inverse for your entry signal. You're looking for price to push back up through this gap and hold it as support.</p>
+
+    <img src="NQ1__2026-02-10_09-31-53_f9bea.png" alt="15s chart showing the bearish FVG identified for inversion" class="chart-img">
+    <p class="chart-caption">15s NQ — Bearish FVG identified after the sweep. Waiting for price to inverse through it (IFVG) for long entry.</p>
+
+    <!-- STEP 4 -->
+    <h3>Step 4 — Wait for the IFVG, then enter</h3>
+
+    <p>Mark the 15s FVG and wait for price to <strong>inverse</strong> through it. The moment the bearish FVG holds as support (IFVG), that's your entry. Set your TP at +20 points and SL at -20 points. In roughly 70% of cases, the TP is hit.</p>
+
+    <img src="NQ1__2026-02-10_09-32-02_6e642.png" alt="15s chart showing the IFVG entry and price moving to TP" class="chart-img">
+    <p class="chart-caption">15s NQ — The bearish FVG inverses into support. Entry triggered with 20pt TP / 20pt SL. Price rallies to target.</p>
+
+    <div class="callout blue">
+      <span class="callout-icon">🧠</span>
+      <strong>Why inversions work:</strong> A bearish FVG that gets swept and holds as support (IFVG) signals that sell-side liquidity has been consumed and buyers are now in control. It's one of the highest-probability entries in ICT. The same logic applies in reverse for shorts using bullish FVGs.
+    </div>
+
+    <hr>
+
+    <!-- CONTINUATION -->
+    <h2>Playing the Continuation</h2>
+
+    <p>Once your first scalp is booked, the Midnight Open and 8:30 AM levels keep working. They act as dynamic support and resistance for the rest of the session — giving you continuation trades as price pulls back into them.</p>
+
+    <div class="step-block green-bar">
+      <h4><span class="step-num">1</span> Wait for price to tap the level</h4>
+      <p>After the initial move, watch for price to retrace back to either the 8:30 AM Open or the Midnight Open. These levels act as a magnet and then springboard for continuation.</p>
+    </div>
+
+    <div class="step-block green-bar">
+      <h4><span class="step-num">2</span> Identify a 5m FVG at the level</h4>
+      <p>When price taps one of these levels, look for a 5-minute Fair Value Gap forming. This is your higher-timeframe confirmation that institutional interest is holding the level.</p>
+    </div>
+
+    <div class="step-block green-bar">
+      <h4><span class="step-num">3</span> Mark 1m opposing FVGs</h4>
+      <p>While waiting, mark any 1-minute FVGs forming in the opposite direction of your trade — these are your inversion entry candidates.</p>
+    </div>
+
+    <div class="step-block green-bar">
+      <h4><span class="step-num">4</span> Enter on the 1m IFVG</h4>
+      <p>Once price taps into the 5m FVG, wait for a 1m FVG to inverse. Enter with the same parameters: 20pt TP and 20pt SL.</p>
+    </div>
+
+    <img src="NQ1__2026-02-10_09-33-31_ee737.png" alt="1m chart showing continuation setup at key levels with 5m FVG" class="chart-img">
+    <p class="chart-caption">1m NQ — Price rallies and taps the 8:30 AM / Midnight Open levels. A 5m FVG forms as the pullback zone. 1m bearish FVGs marked for inversion entries.</p>
+
+    <img src="NQ1__2026-02-10_09-34-23_d21fa.png" alt="1m chart showing the continuation entry after IFVG" class="chart-img">
+    <p class="chart-caption">1m NQ — Price taps the 5m FVG, the 1m IFVG triggers, and the continuation long is entered with 20pt TP / 20pt SL.</p>
+
+    <div class="callout purple">
+      <span class="callout-icon">♻️</span>
+      <strong>Repeatable all session:</strong> This continuation pattern can repeat multiple times. Every time price pulls back to one of the key levels and a 5m FVG forms, you have another entry opportunity with the same framework.
+    </div>
+
+    <hr>
+
+    <!-- REVERSALS -->
+    <h2>Finding the Reversal</h2>
+
+    <p>If you suspect the move is exhausted and want to catch a reversal rather than a continuation, the framework shifts to a higher timeframe:</p>
+
+    <div class="step-block gold-bar">
+      <h4>🔻 Shorting a bullish move</h4>
+      <p>Look for a <strong>1-hour bearish FVG</strong>. When price trades into this zone, it signals that higher-timeframe sell-side order flow is present. This is your reversal zone to hunt shorts.</p>
+    </div>
+
+    <div class="step-block gold-bar">
+      <h4>🔺 Longing a bearish move</h4>
+      <p>Look for a <strong>1-hour bullish FVG</strong>. When price drops into this zone, it signals higher-timeframe buy-side interest. This is your reversal zone to hunt longs.</p>
+    </div>
+
+    <div class="callout red">
+      <span class="callout-icon">⚠️</span>
+      <strong>Reversals are lower probability than continuations.</strong> Only take these when there's clear higher-timeframe displacement into the 1hr FVG. If you're unsure, stick to the continuation framework — that's where the consistent edge is.
+    </div>
+
+    <hr>
+
+    <!-- QUICK REFERENCE -->
+    <h2>Quick Reference</h2>
+
+    <div class="toggle" onclick="this.classList.toggle('open')">
+      <div class="toggle-header">Initial Trade Checklist</div>
+      <div class="toggle-content">
+        <ul>
+          <li>Plot Midnight Open (00:00 NY) and 8:30 AM Open on your chart</li>
+          <li>Mark 15m ITH / ITL before 9:30 AM</li>
+          <li>At 9:30, check: is price above or below both levels?</li>
+          <li>Below both → long bias. Above both → short bias.</li>
+          <li>Watch 1m for opening candle to sweep 15m liquidity</li>
+          <li>Drop to 15s, identify opposing FVG</li>
+          <li>Wait for IFVG → enter with 20pt TP / 20pt SL</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="toggle" onclick="this.classList.toggle('open')">
+      <div class="toggle-header">Continuation Trade Checklist</div>
+      <div class="toggle-content">
+        <ul>
+          <li>First scalp booked — now wait for price to pull back</li>
+          <li>Watch for price to tap 8:30 AM Open or Midnight Open</li>
+          <li>Identify a 5m FVG forming at the level</li>
+          <li>Mark 1m opposing FVGs as they form</li>
+          <li>Once 5m FVG is tapped, wait for 1m IFVG</li>
+          <li>Enter with same 20pt TP / 20pt SL</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="toggle" onclick="this.classList.toggle('open')">
+      <div class="toggle-header">Reversal Trade Checklist</div>
+      <div class="toggle-content">
+        <ul>
+          <li>Suspect move exhaustion on the higher timeframe</li>
+          <li>For shorts: identify a 1hr bearish FVG above price</li>
+          <li>For longs: identify a 1hr bullish FVG below price</li>
+          <li>Wait for price to trade into the 1hr FVG zone</li>
+          <li>Use lower-timeframe confirmation for entry</li>
+          <li>Lower probability — only take with clear displacement</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="subtle-cta">
+      Ready to put this into practice? Get funded with <a href="https://lucidtrading.com/ref/vedictrades/" target="_blank">Lucid Trading</a> (use code <span class="highlight-num">VEDIC</span> for up to 40% off) or start an evaluation at <a href="https://tradeify.co/?ref=Vedic" target="_blank">Tradeify</a> — both are built for scalpers who need room to trade.
+    </div>
+
+    <div class="end-banner">
+      <span><strong>Lucid Trading</strong> — No DLL, 90% split, no monthly fees</span>
+      <a href="https://lucidtrading.com/ref/vedictrades/" target="_blank" class="end-banner-link">Get Funded →</a>
+    </div>
+
+    <div class="end-banner" style="margin-top: 12px;">
+      <span><strong>Tradeify</strong> — Straightforward evals for futures traders</span>
+      <a href="https://tradeify.co/?ref=Vedic" target="_blank" class="end-banner-link">Start Trading →</a>
+    </div>
+
+    <div class="footer">
+      <p>Written by Vedic Trades · Not financial advice · Trade responsibly</p>
+    </div>
+  </div>
+  
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</body>
+</html>
