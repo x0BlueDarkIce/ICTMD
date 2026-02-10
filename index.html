@@ -149,6 +149,8 @@
 
     .footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-muted); text-align: center; }
 
+    [data-theme="dark"] .tv-btn { background: #e0e0e0 !important; color: #1a1a1a !important; }
+
     @media (max-width: 600px) {
       .vs-grid { grid-template-columns: 1fr; }
       .feature-strip { grid-template-columns: repeat(3, 1fr); }
@@ -207,6 +209,14 @@
       <strong>Need a funded account to trade this?</strong> Check out <a href="https://lucidtrading.com/ref/vedictrades/" target="_blank">Lucid Trading</a> (use code <span class="highlight-num">VEDIC</span> for up to 40% off) or <a href="https://tradeify.co/?ref=Vedic" target="_blank">Tradeify</a> — both are ideal for scalpers.
     </div>
 
+    <div class="callout blue" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+      <div style="flex: 1; min-width: 200px;">
+        <span class="callout-icon">📌</span>
+        <strong>Get the indicator:</strong> Use our free TradingView indicator to automatically plot the Midnight Open and 8:30 AM Open on your chart — no manual marking needed.
+      </div>
+      <a href="https://www.tradingview.com/script/p67sfnEG-Vedictrades-Midnight-8-30-Open/" target="_blank" class="tv-btn" style="display: inline-block; background: #1a1a1a; color: #fff; padding: 10px 20px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap;">Add to TradingView →</a>
+    </div>
+
     <!-- CORE IDEA -->
     <h2>The Core Idea</h2>
 
@@ -256,7 +266,7 @@
     <!-- STEP 1 -->
     <h3>Step 1 — Mark the levels on the 15m chart</h3>
     
-    <p>Your indicator plots the Midnight Open and 8:30 AM Open automatically. Your job is to identify and mark the <strong>15m liquidity</strong> — the intermediate-term highs (ITH) and lows (ITL) formed before 9:30 AM. In this example, we marked the 15m ITLs below the session open.</p>
+    <p>The <a href="https://www.tradingview.com/script/p67sfnEG-Vedictrades-Midnight-8-30-Open/" target="_blank">Vedictrades' Midnight & 8:30 Open indicator</a> plots both levels automatically. Your job is to identify and mark the <strong>15m liquidity</strong> — the intermediate-term highs (ITH) and lows (ITL) formed before 9:30 AM. In this example, we marked the 15m ITLs below the session open.</p>
 
     <img src="NQ1!_2026-02-10_09-30-03_7599d.png" alt="15m chart showing Midnight Open, 8:30 AM Open, and 15m liquidity levels" class="chart-img">
     <p class="chart-caption">15m NQ — Midnight Open (00:00 NY) and 8:30 AM Open marked. Price is below both at 9:30 AM = long bias. 15m ITLs marked as sweep targets.</p>
@@ -359,7 +369,7 @@
       <div class="toggle-header">Initial Trade Checklist</div>
       <div class="toggle-content">
         <ul>
-          <li>Plot Midnight Open (00:00 NY) and 8:30 AM Open on your chart</li>
+          <li>Add the <a href="https://www.tradingview.com/script/p67sfnEG-Vedictrades-Midnight-8-30-Open/" target="_blank">Vedictrades' indicator</a> to plot Midnight Open (00:00 NY) and 8:30 AM Open</li>
           <li>Mark 15m ITH / ITL before 9:30 AM</li>
           <li>At 9:30, check: is price above or below both levels?</li>
           <li>Below both → long bias. Above both → short bias.</li>
